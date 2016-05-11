@@ -1,63 +1,96 @@
-{% extends "layout.html" %}
+{% extends "layout_dwp.html" %}
 
 {% block page_title %}
   GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
-
-<main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge">Add customer</h1>
+      </div>
 
-      <h1 class="heading-xlarge">The GOV.UK prototype kit</h1>
 
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <div class="column-one-half">
 
-      <h2 class="heading-medium">About this page</h2>
+        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+        <div class="form-group">
+          <label class="form-label-bold" for="first-name-2">First name</label>
+          <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="last-name-2">Last name</label>
+          <input class="form-control" id="last-name-2" name="last-name-2" type="text">
+        </div>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+        <label class="form-label-bold" for="ni-number">
+          National Insurance number
+        </label>
+        <input class="form-control" id="ni-number" type="text">
 
-			<h2 class="heading-medium">Examples and documentation</h2>
+        <br/><br/>
 
-			<ul class="list list-bullet">
-				<li><a href="/examples">Example pages and patterns</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit/tree/master/docs">
-						Read the full documentation</a></li>
-			</ul>
+        <div class="form-group">
+  			  <fieldset>
+  			    <legend class="form-label-bold">Date of birth</legend>
+  			       <div class="form-date">
+  			        <fieldset>
+  								<div class="form-group form-group-day">
+  									<label for="dob-day">Day</label>
+  								  <input class="form-control" name="dob-day" id="dob-day" type="text" maxlength="2">
+  								</div>
 
-      <h2 class="heading-medium">Other resources</h2>
+  								<div class="form-group form-group-month">
+  									<label for="dob-month">Month</label>
+  								  <input class="form-control" name="dob-month" id="dob-month" type="text" maxlength="2">
+  								</div>
 
-			<ul class="list list-bullet">
-				<li>
-					<a href="http://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
+  								<div class="form-group form-group-year">
+  								  <label for="dob-year">Year</label>
+  									<input class="form-control" name="dob-year" id="dob-year" type="text" maxlength="4">
+  							  </div>
+  						  </fieldset>
+  					  </div>
+  			    </fieldset>
+  				</div>
+        </div>
 
-    </div>
+        <div class="column-one-half">
+          <label class="form-label-bold" for="address-details">Address details</label>
+          <div class="form-group">
+            <label class="form-label" for="building-number">Building number</label>
+            <input class="form-control" id="building-number" name="building-number" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="street-name">Street name</label>
+            <input class="form-control" id="street-name" name="street-name" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="town">Town</label>
+            <input class="form-control" id="town" name="town" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="county">County</label>
+            <input class="form-control" id="county" name="county" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="postcode">Postcode</label>
+            <input class="postcode form-control" id="postcode" name="postcode" type="text">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="invite-code">Invite code</label>
+            <input class="form-control" id="invite-code" name="invite-code" type="text">
+          </div>
+
+          <input class="button" type="submit" value="Add customer">
+        </div>
+
+
+
+
+
+
   </div>
-</main>
-
 {% endblock %}
-
-

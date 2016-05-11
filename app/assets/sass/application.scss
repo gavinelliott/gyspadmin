@@ -39,3 +39,21 @@
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.dwplogo {
+  margin-top: -2px !important;
+  font-size: 30px !important;
+  background: none !important;
+}
+
+.built-by-dwp {
+    font-size: 16px;
+}
+
+.postcode {
+  width: 30%;
+}
+
+.fifty { width: 48%; }
+
+@import 'admin-menu';
