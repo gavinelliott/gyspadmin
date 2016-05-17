@@ -1,7 +1,7 @@
 {% block top_of_page %}{% endblock %}
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8 unbranded" lang="{{ html_lang|default('en') }}"><![endif]-->
-<!--[if gt IE 8]><!--><html class="unbranded" lang="{{ html_lang|default('en') }}"><!--<![endif]-->
+<!--[if gt IE 8]><!--><html lang="{{ html_lang|default('en') }}"><!--<![endif]-->
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
@@ -94,28 +94,29 @@
                 <li><a href="#">Action link 2</a></li>
               </ul>
             </div>
+          -->
           </div>
-        </header>-->
+        </header>
 
         {% block after_header %}{% endblock %}
 
         <div class="admin-wrapper">
-          <div class="admin-column-wrapper">
+            <div class="admin-sidebar-wrapper">
+                <div class="admin-sidebar-content">
+                  <ul>
+                    <li><a href="/">Add customer</a></li>
+                    <li><a href="completed-claims">Completed claims</a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+
             <div class="admin-content-wrapper">
               <div class="admin-content">
                 {% block content %}{% endblock %}
               </div>
             </div>
-
-            <div class="admin-sidebar-wrapper">
-              <div class="admin-sidebar-content">
-                <ul>
-                  <li><a href="/">Add customer</a></li>
-                  <li><a href="completed-claims">Completed claims</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
 
         <footer>

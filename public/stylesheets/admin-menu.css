@@ -1,8 +1,3 @@
-.admin-wrapper a {
-  text-decoration: none;
-  color: #000;
-}
-
 .admin-header-wrapper {
   background-color: #DEE0E2;
   height: 40px;
@@ -14,7 +9,6 @@
 .admin-header-content {
   margin: auto;
   width: 100%;
-  max-width: 1020px;
 }
 
 .admin-header-content li {
@@ -29,46 +23,36 @@
 }
 
 .admin-wrapper {
-  position: relative;
   clear: both;
-  float: left;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   background-color: #F8F8F8;
 }
 
-.admin-wrapper .admin-column-wrapper {
+.admin-wrapper a {
+  text-decoration: none;
+  color: #000;
+}
+
+.admin-sidebar-wrapper {
   float: left;
-  width: 200%;
+  width: 15%;
+  height: 100%;
   position: relative;
-  left: 20%;
-  background: #fff;
-  border-left: 2px solid #999;
+  /* Smartphones (portrait) ----------- */
 }
 
-.admin-wrapper .admin-content-wrapper {
-  float: right;
-  width: 50%;
-  position: relative;
-  padding-bottom: 1em;
-}
-
-.admin-wrapper .admin-content {
-  margin-left: 50px;
-  position: relative;
-  right: 100%;
-  overflow: hidden;
-}
-
-.admin-wrapper .admin-sidebar-wrapper {
-  float: left;
-  width: 10%;
-  position: relative;
-  right: 10%;
+@media only screen and (max-width: 640px) {
+  .admin-sidebar-wrapper {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .admin-sidebar-content {
   padding: 10px 0;
+  height: 100%;
 }
 
 .admin-sidebar-content li {
@@ -85,8 +69,30 @@
   color: #fff;
 }
 
-.admin-sidebar-content {
-  padding: 20px 0;
+.admin-content-wrapper {
+  float: left;
+  width: 84.85%;
+  height: 100%;
+  background: #fff;
+  padding-bottom: 1em;
+  border-left: 1px solid #BFC1C3;
+}
+
+@media only screen and (max-width: 640px) {
+  .admin-content-wrapper {
+    width: 100%;
+    border-top: 1px solid #BFC1C3;
+  }
+}
+
+.admin-content {
+  padding-left: 50px;
+}
+
+@media only screen and (max-width: 640px) {
+  .admin-content {
+    padding: 20px;
+  }
 }
 
 .admin-submenu-container h1 {
@@ -98,21 +104,25 @@
   margin-bottom: 50px;
 }
 
-.admin-submenu li {
+.admin-submenu ul ul li {
   display: inline-block;
   padding: 20px 10px;
 }
 
-.admin-submenu li:first-child {
+.admin-submenu ul li:first-child {
   padding-left: 0;
 }
 
-.admin-submenu li.active {
+.admin-submenu ul li.active {
   -webkit-box-shadow: inset 0px -3px 0px 0px #30a197;
   -moz-box-shadow: inset 0px -3px 0px 0px #30a197;
   box-shadow: inset 0px -3px 0px 0px #30a197;
 }
 
-.admin-submenu a {
+.admin-submenu ul a {
   font-size: 16px;
+}
+
+body, html {
+  height: 100%;
 }
