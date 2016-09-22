@@ -2209,7 +2209,3 @@ input[type=number] {
 .inactive {
   background-color: #ccc;
 }
-
-body, html {
-  height: 100%;
-}
