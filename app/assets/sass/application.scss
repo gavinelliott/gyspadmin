@@ -6,12 +6,12 @@
 @import 'patterns';
 
 // Font Overrides
-*:not(.token) {
+/**:not(.token) {
   font-family: $Helvetica-Regular;
 }
 #proposition-name {
   font-family: $Helvetica-Regular !important;
-}
+}*/
 
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/

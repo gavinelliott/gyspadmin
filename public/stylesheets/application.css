@@ -2032,14 +2032,12 @@ input[type=number] {
   padding-right: 0;
 }
 
-*:not(.token) {
-  font-family: "GDS-Logo", sans-serif;
+/**:not(.token) {
+  font-family: $Helvetica-Regular;
 }
-
 #proposition-name {
-  font-family: "GDS-Logo", sans-serif !important;
-}
-
+  font-family: $Helvetica-Regular !important;
+}*/
 .unbranded {
   background: #fff;
 }
@@ -2202,6 +2200,14 @@ input[type=number] {
 
 .admin-submenu ul a {
   font-size: 16px;
+}
+
+.small-input {
+  width: 180px !important;
+}
+
+.inactive {
+  background-color: #ccc;
 }
 
 body, html {
